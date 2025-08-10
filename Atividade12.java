@@ -7,6 +7,7 @@ public class Atividade12 {
 		System.out.println("Digite sua altura");
 		float alt = input.nextFloat();
 		
+		input.close();
 		System.out.println("Se você é homem, então seu peso ideal é : "+ ((72.7 * alt)-58));
 		System.out.println("Se você é mulher, então seu peso ideal é : "+ ((62.1*alt)-44.7));
 		
