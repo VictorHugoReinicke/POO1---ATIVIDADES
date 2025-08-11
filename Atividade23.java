@@ -6,9 +6,9 @@ public class Atividade23 {
 		
 		System.out.println("Digite a primeira idade");
 		int i1 = input.nextInt();
-		System.out.println("Digite a primeira idade");
+		System.out.println("Digite a segunda idade");
 		int i2 = input.nextInt();
-		System.out.println("Digite a primeira idade");
+		System.out.println("Digite a terceira idade");
 		int i3 = input.nextInt();
 		input.close();
 		int media = (i1+i2+i3)/3;
