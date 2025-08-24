@@ -2,7 +2,8 @@ import java.util.Scanner;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Atividade16 {
 
@@ -19,9 +20,13 @@ public class Atividade16 {
 		int somaP = 0;
 		int somaS = 0;
 
-		System.out.println("Números");
-		int tam = inp.nextInt();
-
+		int tam;
+		
+		do {
+		    System.out.println("Digite um valor ímpar entre 3 e 11:");
+		     tam = inp.nextInt();
+		} while (tam < 3 || tam > 11 || tam % 2 == 0);
+		
 		int[][] mat = new int[tam][tam];
 
 		for (int i = 0; i < tam; i++) {
@@ -47,12 +52,12 @@ public class Atividade16 {
 			somaP += mat[i][i];
 			somaS += mat[i][tam - 1 - i];
 		}
-		media = soma / tam;
+		media = (double) soma / (tam * tam);
 		try {
 		    BufferedWriter writer = new BufferedWriter(new FileWriter("resultado.txt"));
 
 		    writer.write("Soma: " + soma + "\n");
-		    writer.write("Média: " + media + "\n");
+		    writer.write("Média: " + String.format("%.2f", media) + "\n");
 		    writer.write("Pares: " + pares + "\n");
 		    writer.write("Ímpares: " + impares + "\n");
 		    writer.write("Diagonal Principal: " + somaP + "\n");
@@ -74,6 +79,20 @@ public class Atividade16 {
 		    System.out.println("Erro ao salvar o arquivo: " + e.getMessage());
 		}
 
+		System.out.println("Deseja ler os dados salvos? (s/n)");
+		char opcao = inp.next().charAt(0);
+		if (opcao == 's' || opcao == 'S') {
+		    try {
+		        BufferedReader reader = new BufferedReader(new FileReader("resultado.txt"));
+		        String linha;
+		        while ((linha = reader.readLine()) != null) {
+		            System.out.println(linha);
+		        }
+		        reader.close();
+		    } catch (IOException e) {
+		        System.out.println("Erro ao ler o arquivo: " + e.getMessage());
+		    }
+		}
 		
 		inp.close();
 
