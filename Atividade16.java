@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Atividade16 {
 
@@ -44,21 +48,32 @@ public class Atividade16 {
 			somaS += mat[i][tam - 1 - i];
 		}
 		media = soma / tam;
-		System.out.println("Soma " + soma);
-		System.out.println("Média " + media);
-		System.out.println("Pares " + pares);
-		System.out.println("Impares " + impares);
-		System.out.println("Principal " + somaP);
-		System.out.println("Secundária " + somaS);
-		System.out.println("Maior " + maior);
-		System.out.println("Maior " + menor);
+		try {
+		    BufferedWriter writer = new BufferedWriter(new FileWriter("resultado.txt"));
 
-		for (int i = 0; i < tam; i++) {
-			for (int j = 0; j < tam; j++) {
-				System.out.print(" | " + mat[i][j]);
-			}
-		System.out.println("");
+		    writer.write("Soma: " + soma + "\n");
+		    writer.write("Média: " + media + "\n");
+		    writer.write("Pares: " + pares + "\n");
+		    writer.write("Ímpares: " + impares + "\n");
+		    writer.write("Diagonal Principal: " + somaP + "\n");
+		    writer.write("Diagonal Secundária: " + somaS + "\n");
+		    writer.write("Maior: " + maior + "\n");
+		    writer.write("Menor: " + menor + "\n");
+		    writer.write("Matriz:\n");
+
+		    for (int i = 0; i < tam; i++) {
+		        for (int j = 0; j < tam; j++) {
+		            writer.write(" | " + mat[i][j]);
+		        }
+		        writer.write("\n");
+		    }
+
+		    writer.close();
+		    System.out.println("Resultados salvos em 'resultado.txt'");
+		} catch (IOException e) {
+		    System.out.println("Erro ao salvar o arquivo: " + e.getMessage());
 		}
+
 		
 		inp.close();
 
