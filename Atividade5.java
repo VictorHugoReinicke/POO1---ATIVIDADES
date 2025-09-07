@@ -1,8 +1,8 @@
 
 public class Atividade5 {
  
-	int item=0;
-	int qnt =0;
+	private int item=0;
+	private int qnt =0;
 	
 	
 	public int getItem() {

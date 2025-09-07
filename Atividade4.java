@@ -1,8 +1,8 @@
 
 public class Atividade4 {
 
-	double salario;
-	float horas;
+	private double salario;
+	private float horas;
 
 	public double getSalario() {
 		return salario;
