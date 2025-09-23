@@ -1,0 +1,70 @@
+public class Aula {
+// RELACIONAMENTO ENTRE OBJETOS
+// GENERALIZAÇÃO, DEPENDÊNCIA E ASSOCIAÇÃO(2 FORMAS DIFERENTES)
+// HOJE É A GENERALIZAÇÃO (UML)
+// COESÃO É QUANDO A CLASSE FAZ EXATAMENTE A RESPONSABILIDADE ÚNICA ( EXEMPLO: AO INVÉS DE CRIAR UMA CLASSE PARA ALUNO E PROFESSOR, QUE É O CERTO, CRIAMOS UM ALUINO_PROFESSOR, QUE MESCLA RESPONSABILIDADES DIFERENTES)
+// A MELHOR COESÃO É A FUNCIONAL
+// ACOPLAMENTO, INDICA QUANTO UM MÓDULO DEPENDE DE OUTRO.
+// ACOPLAMENTO MELHOR É OS DADOS(DADOS REALMENTE NECESSÁRIOS PARA OUTROS MÓDULOS É PASSADO COMO PARÂMETRO).
+// ALTA COESÃO(CADA CLASSE FAZ A SUA RESPONSABILIDADE) E BAIXA ACOPLAMENTO(FÁCIL DE DESMONTAR).
+// S ->
+// O ->
+// L ->
+// I ->
+// D ->
+// UML(LINGUAGEM UNIFICADA DE MODELAGEM) DIAGRAMAS ESTRUTURAIS E DIAGRAMAS COMPORTAMENTAIS(RELAÇÕES ENTRE OBJETOS)
+// DIAGRAMA ESTRUTURAL DE CLASSES
+// -------------------------------
+//			Funcionario
+// -------------------------------
+// + sobrenome:String = "Curvello"
+// # grupo:int = 1
+// - id:int
+// -------------------------------	
+// + salario(float.float) : double
+// # teste():void
+// - idVerificador():int
+// -------------------------------	
+	
+// + É PÚBLICO
+// # É PROTECTED
+// - É PRIVADO
+	
+// ATRIBUTO PADRÃO É VISIBILIDADE NOME TIPO E DEPOIS COLOCAR UM DEFAULT	
+// MÉTODO É VISIBILIDADE NOME(PARAMETROS): TIPO
+	
+// QUANDO TEMOS QUE DOCUMENTAR, PRIMEIRO FAZER ESSE UML DEPOIS DESENVOLVER
+
+	
+// RELACIONAMENTO
+// GENERALIZAÇÃO É HERANÇA. SÃO A MESMA COISA
+// GENERALIZAÇÃO É UM RELACIONAMENTO COM POSSIBILIDADE DE SUBSTITUIÇÃO
+// PERGUNTA CHAVE: X É UM(A) CLASSE Y?
+// EXEMPLO: CARRO É UM VEÍCULO? SIM
+// CARRO É UM PNEU? NÃO
+// 
+	
+//------------                             -------------
+//|          |                             |
+//|          |                             |
+//|   MOTO   | ---------------------->     | VEICULO 
+//|          |                             |
+//|          |                             |
+//------------                             -------------
+	
+	
+	// A FLECHA SAI DO FILHO E VAI PARA O PAI, O FILHO SEMPRE É ESPECÍFICO O PAI É GERAL, ESSA SETA É CONTÍNUA E ABERTA, SIGNIFICANDO HERANÇA
+
+	
+	
+// ALUNO --> MATERIA
+// 
+
+//CLASSE PESSOA, CLASSE PESSOA_FISICA, CLASSE PESSOA_JURIDICA
+//PESSOA : NOME, PESSOA_FISICA : CPF, PESSOA_JURIDICA : CNPJ
+
+
+	
+	
+
+}
