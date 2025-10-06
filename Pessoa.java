@@ -5,7 +5,6 @@ public class Pessoa {
 	private String endereco;
 
 	public Pessoa(String nome, String endereco) {
-		super();
 		this.nome = nome;
 		this.endereco = endereco;
 	}
